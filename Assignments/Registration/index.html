@@ -11,54 +11,55 @@
 <body>
     <h1>Registration Form</h1>
     <form action="/process" method="post">
-        <div>
-            <label>First Name:* </label>
-            <input type="text" name="fname" placeholder="Your first name...">
-        </div>
-        <form action="/process" method="post">
+        <form action="">
             <div>
-                <label>Last Name:* </label>
-                <input type="text" name="lname" placeholder="Your last name...">
+                <label>First Name:* </label>
+                <input type="text" name="fname" placeholder="Your first name...">
             </div>
-            <form action="/process" method="post">
+            <form>
                 <div>
-                    <label>Email Address:* </label>
-                    <input type="text" name="email" placeholder="Your email...">
+                    <label>Last Name:* </label>
+                    <input type="text" name="lname" placeholder="Your last name...">
                 </div>
                 <form action="/process" method="post">
                     <div>
-                        <label>Password:* </label>
-                        <input type="text" name="password" placeholder="Your password...">
+                        <label>Email Address:* </label>
+                        <input type="text" name="email" placeholder="Your email...">
                     </div>
                     <form action="/process" method="post">
                         <div>
-                            <label>Confirm Password:* </label>
-                            <input type="text" name="name" placeholder=" Confirm your password...">
+                            <label>Password:* </label>
+                            <input type="text" name="password" placeholder="Your password...">
                         </div>
                         <form action="/process" method="post">
                             <div>
-                                <label>Birthday:* </label>
-                                <input type="text" name="name" placeholder="Your birthday...">
+                                <label>Confirm Password:* </label>
+                                <input type="text" name="name" placeholder=" Confirm your password...">
                             </div>
-                            <p>Gender Identity</p>
-                            <input type="radio" name="" id="">
-                            <label for="">Male</label>
-                            <input type="radio" class="radio">
-                            <label for="">Female</label>
-                            <input type="radio" name="" id="">
-                            <label for="">Non-Binary</label>
-                            <input type="radio" name="" id="">
-                            <label for="">I prefer not to answer</label>
-                            <p>A short description about myself:</p>
-                            <textarea name="" id="" cols="30" rows="5"></textarea>
-                            <p>Favorite Language:</p>
-                            <select name="" id="">
-                                <option value="">Javscript</option>
-                            </select><br>
-                            <input type="checkbox" name="" id="">
-                            <label for="">Yes, i would like to recieve periodic email updates</label>
-                            <input type="submit" value="">
-                            <label for="">Create Account</label>
+                            <form action="/process" method="post">
+                                <div>
+                                    <label>Birthday:* </label>
+                                    <input type="date" name="birthday" placeholder="Your birthday...">
+                                </div>
+                                <p>Gender Identity</p>
+                                <input type="radio" name="gender" id="male">
+                                <label for="">Male</label>
+                                <input type="radio" name="gender" id="female">
+                                <label for="">Female</label>
+                                <input type="radio" name="gender" id="Non-Binary">
+                                <label for="">Non-Binary</label>
+                                <input type="radio" name="gender" id="prefer">
+                                <label for="">I prefer not to answer</label>
+                                <p>A short description about myself:</p>
+                                <textarea name="" id="" cols="30" rows="5"></textarea>
+                                <p>Favorite Language:</p>
+                                <select name="" id="">
+                                    <option value="">Javscript</option>
+                                </select><br>
+                                <input type="checkbox" name="" id="">
+                                <label for="">Yes, i would like to recieve periodic email updates</label>
+                                <input type="submit" value="Create Account">
+        </form>
 </body>
 
 </html>
