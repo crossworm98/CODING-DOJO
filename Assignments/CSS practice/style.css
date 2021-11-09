@@ -1,0 +1,17 @@
+*{
+    background-color:aqua ;
+    color: blueviolet;
+}
+h1{
+    border: 1px solid black;
+}
+#special{
+    font-size: x-large;
+}
+.bordered{
+    border: 2px dotted red;
+}
+
+ul li{
+    margin: 10px;
+}
