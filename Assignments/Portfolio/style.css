@@ -7,3 +7,24 @@ th,td {
     td:last-child, th:last-child{
         border-right: 0px;
     }
+    head{
+        background-image: url(./200900944_192493359428347_2346552969898135526_n.jpg);
+    }
+    label{
+        color: yellow;
+        background-color: black;
+        border-style: solid;
+        border-radius: 3px;
+        padding: 3px;
+        margin: 3px;
+
+    }
+    .Message{
+        margin-top: 10px;
+        margin-bottom: -6px;
+        background-color: black;
+    }
+    .text{
+        background-color: black;
+        color: yellow;
+    }
