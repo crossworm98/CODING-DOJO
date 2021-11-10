@@ -1,0 +1,30 @@
+.container{
+    background-color: aqua;
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
+img{
+    height: 250px;
+}
+.subcontainer{
+    background-color: pink;
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
+.thirdcontainer{
+    background-color: white;
+    width: 1000px;
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
