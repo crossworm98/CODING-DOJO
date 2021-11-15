@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navcontainer">
+        <nav>
+            <h1 class="nav-title">Profile</h1>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#" class="active">My Profile</a></li>
+                <li><a href="#">Find Connections</a></li>
+            </ul>
+            <button class="btn">Sign Out</button>
+        </nav>
+        
+    </div>
+    <div class="maincontainer">
+        <div class="col-2">
+            <div class="usercontainer">
+                <div class="userheader"></div>
+                <img id="profile" src="./user-circle.png" alt="">
+                <div class="usercard">
+                    <h1>Jane Doe</h1>
+                    <div class="location">
+                        <img id="marker" src="./map-marker.png" alt="">
+                        <h2>Seattle</h2>
+                    </div>
+                    <h3>Developer | Engineer | Problem Solver</h3>
+                    <h3>Master of shadows and the Internet!</h3>
+                    <div class="editprofile"></div><img class="gear" src="./gear.png" alt="">
+                    <a class="profilelink" href="http://google.com">Edit Profile</a>
+                </div>
+            </div>
+            <div class="educationcontainer">
+                <div class="educationheader">
+                    <h2>Education</h2>
+                </div>
+                <h2 class="educationcontent">Coding Dojo - Full Stack Bootcamp</h1>
+                <h4 class="educationcontent"> Dec 2019 - Mar 2020</h3>
+                <h2 class="educationcontent">Triple black belt in Python, MERN, and C#...</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="friendcontainer">
+                <div class="friendheader">
+                    <button class="friendcount">2</button>
+                    <h3>Connection Request</h3>
+                </div>
+                <div id="friendpic"><img class="friendpic" src="./user-circle.png" alt="">
+                    <h2>Todd E</h2>
+                    <img class="friendpic-option" src="./accept-circle.png" alt="">
+                    <img class="friendpic-option" src="./close-circle.png" alt="">
+                </div>
+                <div id="friendpic"><img class="friendpic" src="./user-circle.png" alt="">
+                    <h2>Phil K</h2>
+                    <img class="friendpic-option" src="./accept-circle.png" alt="">
+                    <img class="friendpic-option" src="./close-circle.png" alt="">
+                </div>
+            </div>
+            <div class="connectionscontainer">
+                <div class="connectionsheader">
+                    <button class="requestcount">500+!</button>
+                    <h3 class="connectheader">Your Connections</h3>
+                </div>
+                <div class="friendpic-2"><img class="friendpic" src="./user-circle.png" alt="">
+                    <h2>Adrien D</h2>
+                </div>
+                <div class="friendpic-2"><img class="friendpic" src="./user-circle.png" alt="">
+                    <h2>Anne J</h2>
+                </div>
+                <div class="friendpic-2"><img class="friendpic" src="./user-circle.png" alt="">
+                    <h2>Alayne T</h2>
+                </div>
+                <div class="friendpic-2"><img class="friendpic" src="./user-circle.png" alt="">
+                    <h2>Arry Y</h2>
+                </div>
+                <div class="viewmorecontainer"><a id="viewmore" href="google.com">View More</a></div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
