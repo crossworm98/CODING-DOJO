@@ -4,3 +4,9 @@
 button{
     padding: 10px;
 }
+.high{
+    color: Red;
+}
+.low{
+    color: blue;
+}

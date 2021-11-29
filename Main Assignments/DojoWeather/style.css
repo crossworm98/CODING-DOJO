@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header begin */
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #9fc5f8;
+    width: 100%;
+    height: 100px;
+}
+.headercontent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    height: 100%;
+    color: orange;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.locbtn{
+    border: none;
+    background-color: #9fc5f8;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+.subheader{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-height: 50px;
+}
+.subheadercontent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 900px;
+    height: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Header End */
+
+/* Main Container Start */
+
+.container{
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 900px;
+    min-height: 200px;
+}
+.containercontent{
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    width: 900px;
+}
+.dates{
+    text-align: center;
+    background-color: lightgray;
+}
+.weather{
+    margin: 20px 0;
+    width: 60%;
+    border-radius: 50%;
+}
+li{
+    list-style: none;
+}
+ul{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.high{
+    color: Red;
+}
+.low{
+    color: blue;
+}
+
+/* Main Container End */
+
+/* Footer Start */
+
+#footer{
+    display: flex;
+    align-items:center;
+    position: fixed;
+    padding: 10px;
+    bottom: 100px;
+    margin: 0 auto;
+    width: 900px;
+    min-height: 150px;
+    border: 3px solid black;
+}
+p{
+    margin: 10px;
+}
+.cookiebtn{
+    background-color: lightblue;
+    width: 100px;
+    height: 25px;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+    cursor: pointer;
+}
+.cookiebtn:active{
+    box-shadow: 0 0 0 #fff;
+}

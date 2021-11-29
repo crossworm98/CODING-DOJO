@@ -1,0 +1,115 @@
+
+/* HEADER CONTENT */
+
+.header{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 800px;
+    height: 50px;
+    background-color: #333333;
+}
+
+.headertitle{
+    margin-left: 40px;
+}
+
+.headerbuttons{
+    margin-right: 40px;
+}
+
+#joinbtn{
+    background-color: #ff9900;
+    border: 2px solid black;
+    box-shadow: 2px 2px;
+}
+
+#loginbtn{
+    background-color: #085394;
+    border: 2px solid black;
+    box-shadow: 2px 2px;
+}
+
+#just{
+    color: white;
+}
+#dessert{
+    color: #ee9004;
+}
+/* END OF HEADER CONTENT */
+
+/* SUB HEADER CONTENT */
+
+.subheader{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 800px;
+    height: 150px;
+    background-color: #f9cb9c;
+}
+.iconimg{
+    background-color: white;
+    border-radius: 50%;
+    width: 50%;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.searchbar{
+    border: 2px solid black;
+    margin-left: 10px;
+}
+.searchbtn{
+    background-color: #085394;
+    border: 2px solid black;
+}
+
+/* END OF SUBHEADER CONTENT */
+
+/* MAIN CONTENT */
+
+.maincont{
+    margin: 0 auto;
+    display: flex;
+    width: 800px;
+}
+.recipecont{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 20px;
+}
+.recipecont h1, .recipecont img{
+    text-align: center;
+}
+#pietart{
+    width: 70%;
+    margin-left: 70px;
+}
+.recommendedcont{
+    margin: 0 auto;
+    width: 300px;
+    height: 500px;
+}
+.jellylikes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.likebtn{
+    cursor: pointer;
+    width: 35px;
+}
+
+.recheader{
+    border-bottom: 2px solid black;
+}
+
+.recimg{
+    width: 70%;
+}
