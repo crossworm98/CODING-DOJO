@@ -37,7 +37,7 @@ first_name - John, last_name - Rosales
 first_name - Mark, last_name - Guillen
 first_name - KB, last_name - Tonel
 
-
+#Get Values From a List of Dictionaries
 
 students = [
          {'first_name':  'Michael', 'last_name' : 'Jordan'},
@@ -51,4 +51,24 @@ def iterateDictionary2(first_name, students):
 iterateDictionary2('first_name', students)
 iterateDictionary2('last_name', students)
 
+#Iterate Through a Dictionary with List Values
 
+dojo = {
+   'locations': ['San Jose', 'Seattle', 'Dallas', 'Chicago', 'Tulsa', 'DC', 'Burbank'],
+   'instructors': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
+}
+def printInfo(dojo):
+    for k, v in dojo.items():
+        if ( len(v) == 7):
+            print (len(v), "Locations")
+        else:
+            print(len(v), "instructors")
+        for value in range(0, len(v)):
+            if( k == 'locations'):
+                print(v[value])
+                if( k == 'instructors'):
+                    print(v[value])
+printInfo(dojo)
+
+
+#Create a function printInfo(some_dict) that given a dictionary whose values are all lists, prints the name of each key along with the size of its list, and then prints the associated values within each key's list. For example:
