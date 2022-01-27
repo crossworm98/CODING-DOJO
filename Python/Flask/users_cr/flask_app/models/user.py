@@ -1,4 +1,5 @@
-from mysqlconnection import connectToMySQL
+from flask_app.config.mysqlconnection import connectToMySQL
+
 
 class User:
     def __init__(self, data):
@@ -28,5 +29,9 @@ class User:
         return user
     @classmethod
     def update(cls, data):
-        query = "UPDATE users SET (first_name, last_name, email, updated_at) VALUES ( %(fname)s. %(lname)s, %(email)s, NOW())"
+        query = "UPDATE users SET first_name = %(fname)s,  last_name = %(lname)s, email = %(email)s, updated_at = NOW() WHERE id = %(id)s"
+        return connectToMySQL('users_schema').query_db(query, data)
+    @classmethod
+    def delete(cls, data):
+        query = "DELETE FROM users WHERE id = %(id)s"
         return connectToMySQL('users_schema').query_db(query, data)
