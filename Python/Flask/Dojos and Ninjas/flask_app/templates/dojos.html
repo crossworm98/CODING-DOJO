@@ -18,7 +18,7 @@
     <div class="alldojo">
         <h1>All Dojos</h1>
         {% for dojo in all_dojos %}
-            <a href="">{{dojo.name}}</a>
+            <a href="/dojoninjas/{{dojo.id}}">{{dojo.name}}</a>
             <hr>
         {% endfor %}
         <a href="/addninja">Add a Ninja!</a>
