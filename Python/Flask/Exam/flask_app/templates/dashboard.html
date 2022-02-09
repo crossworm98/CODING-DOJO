@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome {{user[0].first_name}}</h1>
+    <h1>My TV shows</h1>
+    {% for show in shows %}
+        <p>Title: {{show.title}}</p>
+        <p>Network: {{show.network}}</p>
+        <p>Release Date: {{show.release_date}}</p>
+        <a href="/showdetails/{{show.id}}">Show</a>
+        <a href="/editshow/{{show.id}}">Edit</a>
+        <a href="/delete/{{show.id}}">Delete</a>
+        <hr>
+    {% endfor %}
+    <a href="/addshow">Add a New Show</a>
+    <a href="/">Home</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

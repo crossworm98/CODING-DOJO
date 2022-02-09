@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}               
+        {% for message in messages %} 
+            <p>{{message}}</p>      
+        {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <h1>Add a new show</h1>
+    <form action="/postshow" method="POST">
+        <label for="title">Title</label>
+        <input type="text" name='title'>
+        <label for="network">Network:</label>
+        <input type="text" name="network">
+        <label for="date">Release date:</label>
+        <input type="date" name="date">
+        <label for="comments">Comments:</label>
+        <input type="text" name="comments">
+        <input type="submit" value="Add a show!">
+    </form>
+    <a href="/dashboard">Tv Shows</a>
+    <a href="/logout">Logout</a>
+</body>
+</html>

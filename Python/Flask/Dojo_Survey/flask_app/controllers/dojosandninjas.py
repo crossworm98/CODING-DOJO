@@ -2,6 +2,7 @@ from flask_app import app
 from flask import render_template,redirect,request
 from flask_app.models.ninja import Ninja
 from flask_app.models.dojo import Dojo
+from flask_app.models.survey import Survey
 
 @app.route('/dojos')
 def index():
@@ -15,7 +16,7 @@ def newdojo():
         "name": request.form["name"]
     }
     dojoid = Dojo.save(data)
-    return redirect('/')
+    return redirect('/dojos')
 
 @app.route('/addninja')
 def newninja():
@@ -45,3 +46,21 @@ def dojosninjas(id):
 def dojosurvey():
     surveyget = Survey.get_all()
     return render_template('dojosurvey.html', all_dojos=surveyget)
+
+@app.route('/postsurvey', methods=['POST'])
+def postsurvey():
+    if not Survey.validate_survey(request.form):
+        return redirect('/dojosurvey')
+    data = {
+        "name": request.form["name"],
+        "dojoloc": request.form["dojoloc"],
+        "dojolang": request.form["dojolang"],
+        "comment": request.form["comment"]
+    }
+    surveysave = Survey.save(data)
+    return redirect(f'/results/{surveysave}')
+
+@app.route('/results/<int:id>')
+def results(id):
+    dojo = Survey.results({'id':id})
+    return render_template('results.html', dojo = dojo)
