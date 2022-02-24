@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/postsurvey" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name">
+        <select name="dojoloc">
+            <option value="null">(pick one)</option>
+            <option value="atlanta">Atlanta</option>
+            <option value="chicago">Chicagow</option>
+            <option value="tampa">Tampa</option>
+        </select>
+        <select name="dojolang">
+            <option value="null">(pick one)</option>
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+        <label for="comment" >Comments:</label>
+        <input type="text" name="comment">
+        <input type="submit" value="Add User">
+    </form> 
+</body>
+</html>
