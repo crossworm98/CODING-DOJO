@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome {{artist[0].first_name}} {{artist[0].last_name}}</h1>
+    <h1>Paintings</h1>
+    {% for painting in paint %}
+        <p><a href="/paintings/{{painting.paintings.id}}">{{painting.title}}</a> by {{painting.first_name}} {{painting.last_name}}</p>
+        <p>Network: {{painting.description}}</p>
+        <p>Release Date: {{painting.price}}</p>
+        <a href="/editpainting/{{painting.id}}">Edit</a>
+        <a href="/delete/{{painting.id}}">Delete</a>
+        <hr>
+    {% endfor %}
+    <a href="/addpainting">Add a painting!</a>
+    <a href="/logout">Log Out</a>
+</body>
+</html>
