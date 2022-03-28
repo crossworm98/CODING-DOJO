@@ -18,7 +18,6 @@
     <a href="/addpainting">Add a painting!</a>
     <a href="/dashboard">Dashboard</a>
     <a href="/logout">Log Out</a>
-    {% for painting in paintings %}
     <form action="/postedit/{{painting.id}}" method="POST">
         <label for="title">Title:</label>
         <input type="text" name="title" value="{{painting.title}}">
@@ -28,6 +27,5 @@
         <input type="text" name="price" value="{{painting.price}}">
         <input type="submit" value="Update Painting">
     </form> 
-    {% endfor %}
 </body>
 </html>

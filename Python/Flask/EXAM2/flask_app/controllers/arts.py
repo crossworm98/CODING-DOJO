@@ -28,11 +28,8 @@ def regpost():
 @app.route('/dashboard')
 def dashboard():
     artist_id = session['artist_id']
-    artist = Artist.get_artist({'id':artist_id})
+    artist = Artist.get_all()
     painting = Painting.getall_paintings()
-    for x in painting:
-        for key, val in x.items():
-            print(key, " = ", val)
     return render_template('dashboard.html', artist=artist, paint=painting)
 
 @app.route('/login', methods=['POST'])
@@ -72,7 +69,7 @@ def editpainting(id):
         "id": id
     }
     painting = Painting.pickone(data)
-    return render_template('edit.html', paintings=painting)
+    return render_template('edit.html', painting=painting)
 
 @app.route('/postedit/<int:id>', methods=['POST'])
 def postedit(id):
@@ -89,11 +86,9 @@ def postedit(id):
 
 @app.route('/paintings/<int:id>')
 def showpainting(id):
-    painting = Painting.get_paintings({'id': id})
-    artist_id = session['artist_id']
-    artist = Artist.get_artist({'id': artist_id})
-    print(painting)
-    return render_template('painting.html', painting=painting, artist=artist)
+    painting = Painting.pickone({'id': id})
+    artist = Artist.get_artist({'id':painting.artist_id})
+    return render_template('painting.html', artist=artist, painting=painting)
 
 @app.route('/delete/<int:id>')
 def delete(id):
@@ -107,3 +102,4 @@ def delete(id):
 def logout():
     session.clear()
     return redirect('/')
+

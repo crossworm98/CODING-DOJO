@@ -10,11 +10,9 @@
     <a href="/dashboard">Dashboard</a>
     <a href="/addpainting">Add a painting!</a>
     <a href="/logout">Log Out</a>
-    {% for painting in painting %}
     <h1>{{painting.title}}</h1>
-    <p>Painted by: {{painting.first_name}} {{painting.last_name}}</p>
+    <p>Painted by: {{artist.first_name}} {{artist.last_name}}</p>
     <p>Description: {{painting.description}}</p>
     <p>Price: {{painting.price}}</p>
-    {% endfor %}
 </body>
 </html>

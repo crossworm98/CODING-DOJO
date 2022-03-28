@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/pies">Pie Derby</a>
+    <h1>Welcome {{user[0].first_name}} {{user[0].last_name}}</h1>
+    <h1>Your Pies!</h1>
+    {% for pie in pies %}
+        <p>Name: {{pie.name}}</p>
+        <p>Filing: {{pie.filling}}</p>
+        <p>Crust: {{pie.crust}}</p>
+        <a href="/editpie/{{pie.id}}">Edit</a>
+        <a href="/delete/{{pie.id}}">Delete</a>
+        <hr>
+    {% endfor %}
+    <H1>Add a new Pie!</H1>
+    <form action="/postpie" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name='name'>
+        <label for="filling">Filling:</label>
+        <input type="text" name="filling">
+        <label for="crust">Crust:</label>
+        <input type="text" name="crust">
+        <input type="submit" value="Add a Pie!">
+    </form>
+    <a href="/logout">Log Out</a>
+</body>
+</html>

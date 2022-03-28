@@ -13,19 +13,25 @@ class Artist:
         self.password = data['password']
     @classmethod
     def register(cls, data):
-        query = "INSERT INTO artist (first_name, last_name, email, password) VALUES (%(fname)s, %(lname)s, %(email)s, %(password)s)"
+        query = "INSERT INTO artists (first_name, last_name, email, password) VALUES (%(fname)s, %(lname)s, %(email)s, %(password)s)"
         return connectToMySQL(DB).query_db(query, data)
     @classmethod
     def get_artist(cls, data):
-        query = "SELECT * FROM artist WHERE id = %(id)s"
-        return connectToMySQL(DB).query_db(query, data)
+        query = "SELECT * FROM artists WHERE id = %(id)s"
+        results = connectToMySQL(DB).query_db(query, data)
+        if len(results) < 1:
+            return False
+        return results[0]
     @classmethod
     def get_email(cls, data):
-        query = "SELECT * FROM artist WHERE email = %(email)s"
+        query = "SELECT * FROM artists WHERE email = %(email)s"
         result = connectToMySQL(DB).query_db(query, data)
         if len(result) < 1:
             return False
         return cls(result[0])
+    @classmethod
+    def get_all(cls):
+        query = "SELECT * FROM artists LEFT JOIN paintings ON artist.id"
     @staticmethod
     def validate_artist(artist):
         is_valid = True

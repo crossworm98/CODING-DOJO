@@ -9,22 +9,26 @@ class Painting:
         self.title = data['title']
         self.description = data['description']
         self.price = data['price']
+        self.artist_id = data['artist_id']
     @classmethod
     def save(cls, data):
         query = "INSERT INTO paintings ( title, description, price, artist_id  ) VALUES (%(title)s, %(description)s, %(price)s, %(artist_id)s )"
         return connectToMySQL(DB).query_db(query, data)
     @classmethod
     def get_paintings(cls, data):
-        query = "SELECT * FROM paintings WHERE id = %(id)s"
+        query = "SELECT * FROM artists JOIN paintings ON artist.id = paintings.artist_id WHERE artist_id = %(id)s"
         return connectToMySQL(DB).query_db(query, data)
     @classmethod
     def getall_paintings(cls):
-        query = "SELECT * FROM artist LEFT JOIN paintings ON artist.id = paintings.artist_id"
+        query = "SELECT * FROM paintings JOIN artists ON artists.id = paintings.artist_id"
         return connectToMySQL(DB).query_db(query)
     @classmethod
     def pickone(cls, data):
         query = "SELECT * FROM paintings WHERE id = %(id)s"
-        return connectToMySQL(DB).query_db(query, data)
+        results = connectToMySQL(DB).query_db(query, data)
+        if len(results) < 1:
+            return False
+        return cls(results[0])
     @classmethod
     def update(cls, data):
         query = "UPDATE paintings SET title = %(title)s, description = %(description)s, price = %(price)s WHERE id = %(id)s"

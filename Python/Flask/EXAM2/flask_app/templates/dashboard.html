@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome {{artist[0].first_name}} {{artist[0].last_name}}</h1>
+    <h1>Welcome {{artist.first_name}} {{artist.last_name}}</h1>
     <h1>Paintings</h1>
     {% for painting in paint %}
-        <p><a href="/paintings/{{painting.paintings.id}}">{{painting.title}}</a> by {{painting.first_name}} {{painting.last_name}}</p>
+        <p><a href="/paintings/{{painting.id}}">{{painting.title}}</a> by {{painting.first_name}} {{painting.last_name}}</p>
         <p>Network: {{painting.description}}</p>
         <p>Release Date: {{painting.price}}</p>
         <a href="/editpainting/{{painting.id}}">Edit</a>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/logout">LogOut</a>
+    <h1>${{car[0].price}}</h1>
+    <p>Model: {{car[0].model}}</p>
+    <p>Make: {{car[0].make}}</p>
+    <p>Year: {{car[0].year}}</p>
+    <p>Description: {{car[0].description}}</p>
+    <p>Seller: {{car[0].first_name}}</p>
+    <a href="/delete/{{car[0].id}}">Purchase</a>
+</body>
+</html>

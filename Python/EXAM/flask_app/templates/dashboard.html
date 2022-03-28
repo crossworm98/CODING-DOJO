@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>Welcome to Car Dealz {{seller.first_name}}</H1>
+    {% for car in cars %}
+        <p>Model: {{car.model}}</p>
+        <p>Year: {{car.year}}</p>
+        <p>Seller: {{car.first_name}}</p>
+        <p><a href="/view/{{car.id}}">View</a></p>
+        <p><a href="/edit/{{car.id}}">Edit</a></p>
+        <hr>
+    {% endfor %}
+    <a href="/addcar">Add a Car!</a>
+    <a href="/logout">Log Out</a>
+</body>
+</html>

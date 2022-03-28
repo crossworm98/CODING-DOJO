@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/dashboard">Dashboard</a>
+    <a href="/logout">LogOut</a>
+    <h1>{{pie.name}} By {{user[0].first_name}}</h1>
+    <p>{{pie.filling}} with a {{pie.crust}} Crust</p>
+    <h2>Cast a Vote:</h2>
+    <form action="/addvote/{{pie.id}}" method="POST">
+        <input type="submit" value="Delicious">
+    </form>
+</body>
+</html>
